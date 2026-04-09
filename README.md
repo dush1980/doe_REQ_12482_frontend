@@ -25,74 +25,14 @@ This project uses:
 
 - `VITE_API_BASE_URL`: backend base URL used by axios (example: `http://localhost:3000`)
 
-### 1. Create env file
+### Create env file
 
-Create `.env` in the project root (`REQ12482/.env`):
-
-```env
-VITE_API_BASE_URL=http://localhost:3000
-```
-
-### 2. Optional mode-specific files
-
-Use these files when values differ by environment:
-
-- `.env.development`
-- `.env.production`
-- `.env.local` (machine-specific, do not commit)
-
-Example:
-
-```env
-# .env.development
-VITE_API_BASE_URL=http://localhost:3000
-```
-
-```env
-# .env.production
-VITE_API_BASE_URL=https://api.yourdomain.com
-```
-
-### 3. Precedence (highest to lowest)
-
-1. `.env.[mode].local`
-2. `.env.local`
-3. `.env.[mode]`
-4. `.env`
-
-### 4. Restart required
-
-After editing any `.env*` file, stop and restart:
-
-```sh
-npm run dev
-```
-
-### 5. Quick verification
-
-In browser devtools console:
-
-```js
-console.log(import.meta.env.VITE_API_BASE_URL)
-```
-
-If this prints `undefined`, the variable name is wrong (must start with `VITE_`) or the dev server was not restarted.
-
-### 6. Common local setups
-
-Direct API URL:
+Create `.env` in the project root:
 
 ```env
 VITE_API_BASE_URL=http://localhost:3000
 ```
 
-Same-origin proxy setup:
-
-```env
-VITE_API_BASE_URL=
-```
-
-If using proxy, frontend requests go to Vite origin and Vite forwards to backend, which helps avoid CORS issues during local development.
 
 ## Run Frontend
 
