@@ -6,11 +6,6 @@ dist/
 dist-ssr/
 coverage/
 
-# Environment files
-.env
-.env.*
-!.env.example
-
 # Logs
 logs/
 *.log
